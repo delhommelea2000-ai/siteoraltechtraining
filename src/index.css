@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #141414;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Signature O.T.T. Turquoise (#01B6AF) & Deep Petrol Surfaces */
+.bg-ott-core {
+  background: linear-gradient(125deg, #053B3E 0%, #065D61 42%, #01B6AF 100%);
+}
+
+/* Exact Footer O.T.T. Gradient from footer ott.jpg harmonized with #01B6AF */
+.bg-ott-footer-ref {
+  background: linear-gradient(
+    90deg,
+    #04474C 0%,
+    #056970 30%,
+    #01B6AF 66%,
+    #38C6C0 88%,
+    #85E2DE 100%
+  );
+}
+
+/* Soft lateral fade mask for client logo strip */
+.ott-logo-mask {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@keyframes ottLogoMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ott-marquee {
+  display: flex;
+  width: max-content;
+  animation: ottLogoMarquee 36s linear infinite;
+}
+
+.animate-ott-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Blinking thin cursor from O.T.T. Landing Page Mockup */
+@keyframes ottPulseCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+.ott-cursor-line {
+  display: inline-block;
+  width: 1.5px;
+  height: 0.86em;
+  background-color: currentColor;
+  vertical-align: -0.08em;
+  margin-left: 8px;
+  animation: ottPulseCursor 2.2s ease-in-out infinite;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #01B6AF;
+  border-radius: 9999px;
+}

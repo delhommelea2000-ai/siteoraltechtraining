@@ -1,0 +1,6 @@
+{
+  "name": "Oral Tech Training - Spécimens Anatomiques Porcins",
+  "description": "Fournisseur français de pièces anatomiques porcines fraîches pour la formation chirurgicale, médicale, dentaire et les laboratoires de R&D.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
